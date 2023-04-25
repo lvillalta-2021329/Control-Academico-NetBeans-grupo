@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="850.0" stylesheets="@../resources/css/EstiloMenuPrincipal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bv.malcantaralvillalta.controllers.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="481.0" fitWidth="860.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/Diseño%20sin%20título.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="213.0" fitWidth="421.0" layoutX="202.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/1.5-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <MenuBar id="menu-bar" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="176.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clicAlumnos" text="Alumnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicInstructores" text="Instructores" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicSalones" text="Salones" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicCarrerasTecnicas" text="Carreras Técnicas" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicCursos" text="Cursos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicAsignacionesAlumnos" text="Asignación Alumnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clicReporteAsignacionesPorId" text="Asignacion Por Id" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteAsignaciones" text="Asignación Alumnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteCursosPorId" text="Cursos Por Id" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteCursos" text="Cursos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteCarreras" text="Carreras Técnicas" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteSalones" text="Salones" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteInstructores" text="Instructores" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteAlumnos" text="Alumnos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="?">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clicReporteDatos" text="Datos" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="589.0" layoutY="429.0" text="Developed by Gerárdy Villalta">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

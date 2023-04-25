@@ -1,0 +1,32 @@
+/* 
+    Created on : 7/04/2022, 15:48:34
+    Author     : Marcos Alcantara Hernandez
+    @author Lionar Gerardy Villalta Barrientos
+*/
+
+#panel-navegacion {
+    -fx-background-color:#D7DBDD;
+}
+
+#pane-entidad {
+    -fx-background-color:#566573;
+    -fx-background-radius: 0 0 20 20;
+}
+
+#vbox-crud {
+    -fx-background-color: #D7DBDD;
+}
+
+/*
+  El punto va cunado es un conjunto de botones y se vuelve una clase
+  punto para los cnjuntos de clases, y numeral para uno solo
+*/
+
+.botones-crud {
+    -fx-background-color:#D7DBDD;
+}
+
+.botones-crud:hover {
+    -fx-background-color:#566573;
+    -fx-text-fill:#ffffff;
+}

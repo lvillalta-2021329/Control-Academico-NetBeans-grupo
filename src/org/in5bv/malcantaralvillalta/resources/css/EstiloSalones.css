@@ -1,0 +1,28 @@
+/* 
+    Created on : 27/04/2022, 21:35:04
+    Author     : Marcos Alcantara Hernandez
+    @author Lionar Gerardy Villalta Barrientos
+*/
+
+#panel-navegacion {
+    -fx-background-color:#D7DBDD;
+}
+
+#pane-entidad {
+    -fx-background-color:#566573;
+    -fx-background-radius: 0 0 20 20;
+}
+
+#vbox-crud {
+    -fx-background-color: #D7DBDD;
+}
+
+.botones-crud {
+    -fx-background-color:#D7DBDD;
+}
+
+.botones-crud:hover {
+    -fx-background-color:#566573;
+    -fx-text-fill:#ffffff;
+}
+

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="850.0" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bv.malcantaralvillalta.controllers.CursosController">
+   <children>
+      <BorderPane layoutX="-7.0" layoutY="-4.0" prefHeight="469.0" prefWidth="828.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-4.0">
+         <left>
+            <Pane id="panel-navegacion" prefHeight="465.0" prefWidth="161.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane id="pane-entidad" layoutX="22.0" prefHeight="143.0" prefWidth="127.0">
+                     <children>
+                        <VBox layoutX="17.0" layoutY="7.0" prefHeight="134.0" prefWidth="97.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="101.0" text="   Cursos" textFill="WHITE">
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="21.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ImageView fitHeight="83.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/cursos.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="7.0" top="7.0" />
+                                 </VBox.margin></ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <VBox id="vbox-crud" layoutY="158.0" prefHeight="264.0" prefWidth="146.0">
+                     <children>
+                        <HBox prefHeight="51.0" prefWidth="137.0">
+                           <children>
+                              <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#clicNuevo" prefHeight="26.0" prefWidth="250.0" styleClass="botones-crud" text="Nuevo">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fx:id="imgNuevo" fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/agregar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="147.0">
+                           <children>
+                              <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#clicModificar" prefHeight="26.0" prefWidth="250.0" styleClass="botones-crud" text="Modificar">
+                                 <HBox.margin>
+                                    <Insets left="16.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fx:id="imgModificar" fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/modificar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="62.0" prefWidth="117.0">
+                           <children>
+                              <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#clicEliminar" prefHeight="26.0" prefWidth="250.0" styleClass="botones-crud" text="Eliminar">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fx:id="imgEliminar" fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/eliminar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="81.0" prefWidth="117.0">
+                           <children>
+                              <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#clicReporte" prefHeight="26.0" prefWidth="250.0" styleClass="botones-crud" text="Reporte">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/report.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblCursos" layoutX="10.0" layoutY="184.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="226.0" prefWidth="700.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="44.0" text="ID" />
+                      <TableColumn fx:id="colNombreCurso" prefWidth="152.0" text="Nombre Curso" />
+                        <TableColumn fx:id="colCiclo" prefWidth="50.0" text="Ciclo" />
+                        <TableColumn fx:id="colCupoMaximo" prefWidth="63.0" text="Cupo Max" />
+                        <TableColumn fx:id="colCupoMinimo" prefWidth="70.0" text="Cupo Min" />
+                        <TableColumn fx:id="colCodigoTecnico" prefWidth="98.0" text="Codigo Técnico" />
+                        <TableColumn fx:id="colHorario" prefWidth="70.0" text="Horario ID" />
+                        <TableColumn fx:id="colInstructor" prefWidth="75.0" text="Intructor" />
+                        <TableColumn fx:id="colSalon" prefWidth="82.0" text="Salón" />
+                    </columns>
+                  </TableView>
+                  <GridPane layoutX="29.0" layoutY="14.0" prefHeight="160.0" prefWidth="650.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="123.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="184.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="7.0" prefWidth="97.6666259765625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="181.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="0.0" prefWidth="55.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="41.333335876464844" minHeight="10.0" prefHeight="33.66666793823242" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="45.33333206176758" minHeight="10.0" prefHeight="31.333332061767578" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="41.333335876464844" minHeight="10.0" prefHeight="30.333335876464844" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.666664123535156" minHeight="10.0" prefHeight="33.666656494140625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.333343505859375" minHeight="10.0" prefHeight="32.333343505859375" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtId" disable="true" editable="false" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" />
+                        <Label text="ID Curso" />
+                        <Label text="Nombre Curso" GridPane.rowIndex="1" />
+                        <TextField disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Carrera Tecnica" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Ciclo Escolar" GridPane.rowIndex="2" />
+                        <Label text="Horario" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Instructor" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Cupo Maximo" GridPane.rowIndex="3" />
+                        <Label text="Cupo Minimo" GridPane.rowIndex="4" />
+                        <Label text="  Salon" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtNombreCurso" disable="true" editable="false" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Spinner fx:id="spnCiclo" disable="true" editable="true" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Spinner fx:id="spnCupoMaximo" disable="true" editable="true" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Spinner fx:id="spnCupoMinimo" disable="true" editable="true" prefHeight="26.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="cmbCarreraTecnica" disable="true" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="4" />
+                        <ComboBox fx:id="cmbHorario" disable="true" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="cmbInstructor" disable="true" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="cmbSalon" disable="true" prefHeight="25.0" prefWidth="199.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <ImageView fx:id="imgRegresar" fitHeight="47.0" fitWidth="51.0" layoutX="645.0" layoutY="18.0" onMouseClicked="#clicRegresar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/atras.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane layoutX="226.0" layoutY="423.0" prefHeight="30.0" prefWidth="193.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="72.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="121.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Registros:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtRegistro" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btnCerrar" layoutX="593.0" layoutY="426.0" mnemonicParsing="false" onAction="#clicCerrar" text="Cerrar">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
